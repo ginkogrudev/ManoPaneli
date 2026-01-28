@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* MANO PANELLI - LUXURY THEME */
 
 :root {
     --gold-primary: #f59e0b; /* Amber 500 */
@@ -8,20 +6,36 @@
     --dark-bg: #0a0a0a;
 }
 
+/* Custom Gradients */
 .text-gold-gradient {
     background: linear-gradient(to right, #f59e0b, #fbbf24, #d97706);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.border-gold {
-    border-color: rgba(245, 158, 11, 0.3);
+    background-clip: text; /* Standard property for compatibility */
 }
 
 .bg-gold-gradient {
     background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
 }
 
-/* Luxury Parallax & Smooth Transitions */
-html { scroll-behavior: smooth; }
-body { background-color: var(--dark-bg); color: #fff; }
+.border-gold {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+/* Glassmorphism for Mobile Menu */
+.mobile-glass {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Global Smoothness */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #fff;
+    font-family: 'Inter', sans-serif; /* Fallback */
+}
