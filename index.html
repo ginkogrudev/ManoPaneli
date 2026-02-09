@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="bg" class="scroll-smooth">
+<html lang="bg" class="scroll-smooth dark">
 <head>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-
-        // Default state: Denied
         gtag('consent', 'default', {
             'ad_storage': 'denied',
             'ad_user_data': 'denied',
@@ -27,68 +25,85 @@
     
     <title>Mano Panelli | Авторски Епоксидни Пана</title>
     <meta name="title" content="Mano Panelli | Авторски Епоксидни Пана">
-    <meta name="description" content="Уникални ръчно изработени пана от епоксидна смола за модерни интериори. Превърнете стените си в характер.">
+    <meta name="description" content="Уникални ръчно изработени пана от епоксидна смола. Един и същ панел. Различни роли. За дома, хотела и нощния клуб.">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://manopanelli.com/">
     <meta property="og:title" content="Mano Panelli | Модерен Арт Дизайн">
-    <meta property="og:description" content="Индивидуални решения за офиси, хотели и домове. Чисто и устойчиво изкуство.">
+    <meta property="og:description" content="Интериорът се променя. Ефектът остава. Луксозни решения за стени.">
     <meta property="og:image" content="https://manopanelli.com/img/closeupprocess.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://manopanelli.com/">
-    <meta property="twitter:title" content="Mano Panelli | Модерен Арт Дизайн">
-    <meta property="twitter:description" content="Превърнете стените си в характер с Mano Panelli.">
-    <meta property="twitter:image" content="https://manopanelli.com/img/closeupprocess.jpg">
 
     <link rel="icon" type="image/png" href="img/favicon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
     
     <style>
-        /* Custom Luxury Styles */
-        h1, h2, .brand-font { font-family: 'Cinzel', serif; }
-        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; }
-        
-        .text-gold-gradient {
-            background: linear-gradient(to right, #f59e0b, #fbbf24, #d97706);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .bg-gold-gradient {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        }
-        
-        /* Mobile Menu Glass Effect */
-        .mobile-glass {
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-        }
+        h1, h2, h3, .brand-font { font-family: 'Cinzel', serif; }
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#0a0a0a] text-white overflow-x-hidden antialiased">
+<body class="bg-gray-50 text-zinc-900 dark:bg-[#0a0a0a] dark:text-white overflow-x-hidden antialiased transition-colors duration-300">
 
-    <nav class="fixed w-full z-[100] bg-black/90 border-b border-amber-900/30 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="brand-font text-2xl tracking-[0.2em] text-gold-gradient font-bold uppercase">Mano Panelli</div>
+    <nav class="fixed w-full z-[100] bg-white/90 dark:bg-black/90 border-b border-gray-200 dark:border-amber-900/30 backdrop-blur-md transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="brand-font text-xl md:text-2xl tracking-[0.15em] text-gold-gradient font-bold uppercase whitespace-nowrap">
+                Mano Panelli
+            </div>
             
-            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-bold">
-                <a href="#gallery" class="hover:text-amber-500 transition">Галерия</a>
-                <a href="#process" class="hover:text-amber-500 transition">Процесът</a>
-                <a href="#reviews" class="hover:text-amber-500 transition">Отзиви</a>
-                <a href="#order" class="text-amber-500 border border-amber-500/50 px-4 py-2 hover:bg-amber-500 hover:text-black transition">Поръчка</a>
+            <div class="hidden md:flex items-center gap-10">
+                <div class="flex gap-8 text-[10px] uppercase tracking-[0.25em] font-bold text-zinc-600 dark:text-white">
+                    <a href="#gallery" class="hover:text-amber-500 transition">Галерия</a>
+                    <a href="#versatility" class="hover:text-amber-500 transition">Приложение</a>
+                    <a href="#process" class="hover:text-amber-500 transition">Процесът</a>
+                </div>
+
+                <div class="flex items-center gap-4 border-l border-gray-300 dark:border-white/20 pl-6">
+                    <button id="theme-toggle" class="text-zinc-600 dark:text-white hover:text-amber-500 transition focus:outline-none">
+                        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    </button>
+                    <div class="text-[10px] font-bold uppercase tracking-widest flex gap-2">
+                        <span class="text-amber-600">BG</span>
+                        <span class="text-gray-300 dark:text-gray-600">|</span>
+                        <a href="index-eu.html" class="text-gray-400 hover:text-black dark:hover:text-white transition">EN</a>
+                    </div>
+                </div>
+
+                <a href="#order" class="flex items-center justify-center text-amber-600 border border-amber-600/50 px-6 py-2 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-amber-600 hover:text-white dark:hover:text-black transition">
+                    Поръчка
+                </a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <button id="mobile-menu-btn" class="md:hidden text-zinc-800 dark:text-white focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mobile-glass border-b border-white/10 py-10 flex-col items-center space-y-8 text-xl font-bold uppercase tracking-widest md:hidden">
-            <a href="#gallery" class="mobile-link hover:text-amber-500">Галерия</a>
-            <a href="#process" class="mobile-link hover:text-amber-500">Процесът</a>
-            <a href="#reviews" class="mobile-link hover:text-amber-500">Отзиви</a>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/95 dark:bg-[#0a0a0a]/95 border-b border-gray-200 dark:border-white/10 py-10 flex-col items-center space-y-8 text-xl font-bold uppercase tracking-widest md:hidden shadow-xl">
+            <a href="#gallery" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Галерия</a>
+            <a href="#versatility" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Приложение</a>
+            <a href="#process" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Процесът</a>
+            <div class="flex gap-6 items-center">
+                <a href="index.html" class="text-amber-500">BG</a>
+                <a href="index-eu.html" class="text-zinc-400">EN</a>
+            </div>
             <a href="#order" class="mobile-link text-amber-500">Поръчка</a>
         </div>
     </nav>
@@ -96,31 +111,100 @@
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="img/hero.jpg" class="w-full h-full object-cover brightness-50" alt="Mano Panelli Lux Interior">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0a0a0a]"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-transparent to-gray-50 dark:from-black/40 dark:to-[#0a0a0a]"></div>
         </div>
         
         <div class="relative z-20 text-center px-6">
-            <h1 class="text-5xl md:text-8xl font-black brand-font mb-4 text-gold-gradient tracking-tighter uppercase">MANO PANELLI</h1>
-            <p class="text-xl md:text-3xl font-light uppercase tracking-[0.4em] mb-12">Модерен Арт Дизайн</p>
-            <a href="#order" class="bg-gold-gradient text-black px-12 py-5 font-black uppercase tracking-widest hover:scale-105 transition inline-block">Започни проект</a>
+            <h1 class="text-5xl md:text-8xl font-black brand-font mb-4 text-gold-gradient tracking-tighter uppercase drop-shadow-2xl">MANO PANELLI</h1>
+            <p class="text-xl md:text-3xl font-light uppercase tracking-[0.4em] mb-12 text-white drop-shadow-md">
+                Интериорът се променя. <br class="md:hidden"> Ефектът остава.
+            </p>
+            <a href="#order" class="bg-gold-gradient text-black px-12 py-5 font-black uppercase tracking-widest hover:scale-105 transition inline-block shadow-lg">Започни проект</a>
         </div>
     </section>
 
-    <section id="process" class="py-24 bg-[#0f0f0f]">
+    <section id="versatility" class="py-24 bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="brand-font text-4xl md:text-5xl font-bold mb-4 uppercase text-zinc-900 dark:text-white">Един Панел. <span class="text-gold-gradient">Много Роли.</span></h2>
+                <p class="text-zinc-500 dark:text-gray-400 max-w-2xl mx-auto">
+                    Този тип пано не е „заковано“ за едно място. То работи еднакво силно в домашна и в публична среда.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group p-8 border border-gray-200 dark:border-white/10 hover:border-amber-500/50 transition duration-500 bg-gray-50 dark:bg-[#0f0f0f]">
+                    <div class="text-amber-500 text-4xl mb-4 font-serif">01.</div>
+                    <h3 class="text-xl font-bold uppercase tracking-widest mb-4 text-zinc-900 dark:text-white">В Спалнята</h3>
+                    <p class="text-zinc-600 dark:text-gray-400 leading-relaxed text-sm">
+                        Създава спокойствие, топлина и усещане за лукс. Материалът е акцент, който превръща личното пространство в убежище.
+                    </p>
+                </div>
+
+                <div class="group p-8 border border-gray-200 dark:border-white/10 hover:border-amber-500/50 transition duration-500 bg-gray-50 dark:bg-[#0f0f0f]">
+                    <div class="text-amber-500 text-4xl mb-4 font-serif">02.</div>
+                    <h3 class="text-xl font-bold uppercase tracking-widest mb-4 text-zinc-900 dark:text-white">Бизнес & Хотел</h3>
+                    <p class="text-zinc-600 dark:text-gray-400 leading-relaxed text-sm">
+                        Дава характер и престиж. В хотелска рецепция създава запомняща се първа визия, без да натоварва интериора.
+                    </p>
+                </div>
+
+                <div class="group p-8 border border-gray-200 dark:border-white/10 hover:border-amber-500/50 transition duration-500 bg-gray-50 dark:bg-[#0f0f0f]">
+                    <div class="text-amber-500 text-4xl mb-4 font-serif">03.</div>
+                    <h3 class="text-xl font-bold uppercase tracking-widest mb-4 text-zinc-900 dark:text-white">Нощен Клуб</h3>
+                    <p class="text-zinc-600 dark:text-gray-400 leading-relaxed text-sm">
+                        Игра със светлината. Паната отразяват светлината по начин, който работи с нощната атмосфера, а не срещу нея.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zinc-100 dark:bg-[#0f0f0f] border-y border-gray-200 dark:border-white/5 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="brand-font text-3xl md:text-4xl text-zinc-900 dark:text-white uppercase">Красота, която е <span class="text-gold-gradient">Практична</span></h2>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div class="w-1 h-full bg-amber-500"></div>
+                        <div>
+                            <h4 class="font-bold text-zinc-800 dark:text-white uppercase text-sm tracking-widest">Влагоустойчивост</h4>
+                            <p class="text-xs text-zinc-500 dark:text-gray-500">Подходящ за СПА и Уелнес зони. Издържа на влага и не задържа замърсяване.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-1 h-full bg-amber-500"></div>
+                        <div>
+                            <h4 class="font-bold text-zinc-800 dark:text-white uppercase text-sm tracking-widest">Лесна Поддръжка</h4>
+                            <p class="text-xs text-zinc-500 dark:text-gray-500">Почиства се лесно. Повърхността остава устойчива във времето, дори в натоварени зони.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-64 md:h-80 overflow-hidden rounded-lg shadow-2xl">
+                <img src="img/coolddarkpic.jpg" alt="Practical Luxury" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                    <p class="text-white font-bold uppercase tracking-widest text-xs">Пространства с енергия</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="relative">
                 <img src="img/closeupprocess.jpg" class="rounded-2xl shadow-[0_0_50px_rgba(217,119,6,0.2)]" alt="Craftsmanship">
-                <div class="absolute -bottom-6 -right-6 bg-gold-gradient p-8 hidden md:block">
+                <div class="absolute -bottom-6 -right-6 bg-gold-gradient p-8 hidden md:block border-l-4 border-black">
                     <p class="text-black font-black text-xs tracking-widest uppercase">Ръчна изработка</p>
                 </div>
             </div>
             
             <div class="space-y-8">
                 <h2 class="brand-font text-5xl text-gold-gradient uppercase">Процесът</h2>
-                <p class="text-gray-400 leading-relaxed italic">
+                <p class="text-zinc-600 dark:text-gray-400 leading-relaxed italic">
                     Всяко движение на шпатулата е намерение. Използваме слоеве от италианска смола и метални пигменти, за да постигнем дълбочина, която стандартната боя не може да достигне.
                 </p>
-                <ul class="space-y-4 text-sm uppercase tracking-widest font-bold">
+                <ul class="space-y-4 text-sm uppercase tracking-widest font-bold text-zinc-800 dark:text-white">
                     <li class="flex items-center gap-4"><span class="text-amber-500">01</span> Концепция & Скица</li>
                     <li class="flex items-center gap-4"><span class="text-amber-500">02</span> Наслояване на смола</li>
                     <li class="flex items-center gap-4"><span class="text-amber-500">03</span> UV Защита & Полиране</li>
@@ -129,135 +213,94 @@
         </div>
     </section>
 
-    <section id="gallery" class="py-24 bg-[#0a0a0a]">
+    <section id="gallery" class="py-24 bg-zinc-50 dark:bg-[#0a0a0a] transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="brand-font text-4xl mb-16 border-l-4 border-amber-600 pl-6 uppercase">Арт в действие</h2>
+            <h2 class="brand-font text-4xl mb-16 border-l-4 border-amber-600 pl-6 uppercase text-zinc-900 dark:text-white">Арт в действие</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="relative overflow-hidden group rounded-lg">
+                <div class="relative overflow-hidden group rounded-lg shadow-lg">
                     <img src="img/staircase.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <span class="border border-white p-4 uppercase tracking-widest font-bold">Виж детайли</span>
+                        <span class="border border-white text-white p-4 uppercase tracking-widest font-bold">Виж детайли</span>
                     </div>
                 </div>
                 
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="img/cleanwhiteroom.jpg" class="rounded-lg border border-white/5 object-cover w-full h-64 md:h-auto">
-                    <img src="img/cozyroom.jpg" class="rounded-lg border border-white/5 object-cover w-full h-64 md:h-auto">
+                    <img src="img/cleanwhiteroom.jpg" class="rounded-lg border border-gray-200 dark:border-white/5 object-cover w-full h-64 md:h-auto shadow-md">
+                    <img src="img/cozyroom.jpg" class="rounded-lg border border-gray-200 dark:border-white/5 object-cover w-full h-64 md:h-auto shadow-md">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-32 bg-[#0a0a0a] overflow-hidden">
+    <section id="about" class="py-32 bg-white dark:bg-[#0a0a0a] overflow-hidden transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                
                 <div class="relative order-2 lg:order-1">
                     <div class="absolute -top-10 -left-10 w-64 h-64 bg-amber-600/10 blur-[100px] z-0"></div>
-                    <div class="relative z-10 border border-amber-900/20 p-2 rounded-2xl bg-zinc-900/50">
+                    <div class="relative z-10 border border-amber-900/20 p-2 rounded-2xl bg-zinc-100 dark:bg-zinc-900/50">
                         <img src="img/founder.jpg" alt="Mano Panelli Founder" class="w-full h-auto rounded-xl shadow-2xl">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 bg-white p-6 shadow-2xl z-20 hidden md:block border-l-4 border-amber-500">
-                        <p class="text-black font-black text-xs uppercase tracking-widest mb-1">Ръчна изработка</p>
-                        <p class="text-amber-600 text-[10px] uppercase font-bold tracking-tight">Всеки детайл има значение</p>
                     </div>
                 </div>
 
                 <div class="order-1 lg:order-2 space-y-8">
                     <h2 class="text-xs font-bold text-amber-500 uppercase tracking-[0.4em]">Историята на MANO</h2>
-                    <h3 class="brand-font text-5xl md:text-6xl leading-tight text-white">
+                    <h3 class="brand-font text-5xl md:text-6xl leading-tight text-zinc-900 dark:text-white">
                         Панелите не са декор. <br> 
                         <span class="text-gold-gradient">Те са характер.</span>
                     </h3>
-                    
-                    <div class="space-y-6 text-gray-400 text-lg font-light leading-relaxed">
-                        <p>
-                            MANO design създава авторски панели и картини от епоксидна смола, които са чисти, модерни и устойчиви във времето.
-                        </p>
-                        <p>
-                            Ние вярваме, че стените на вашия дом, офис или хотел трябва да разказват история. Работим за пространства, където дизайнът има значение.
-                        </p>
-                    </div>
-
-                    <div class="pt-8 border-t border-white/5">
-                        <h4 class="brand-font text-xl mb-4 text-white uppercase tracking-widest">Екипът</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            Обединява ни страстта към детайла и стремежът към съвършенство – от първата консултация до финалния монтаж.
-                        </p>
+                    <div class="space-y-6 text-zinc-600 dark:text-gray-400 text-lg font-light leading-relaxed">
+                        <p>Ние вярваме, че стените на вашия дом, офис или хотел трябва да разказват история. Работим за пространства, където дизайнът има значение.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reviews" class="py-32 bg-[#0f0f0f] border-y border-white/5">
+    <section id="reviews" class="py-32 bg-zinc-100 dark:bg-[#0f0f0f] border-y border-gray-200 dark:border-white/5 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20">
-                <h2 class="brand-font text-4xl md:text-6xl text-white uppercase mb-4">Гласът на нашите клиенти</h2>
-                <p class="text-amber-500 uppercase tracking-widest text-xs font-bold">Доказано качество и стил</p>
+                <h2 class="brand-font text-4xl md:text-6xl text-zinc-900 dark:text-white uppercase mb-4">Гласът на клиентите</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-black border border-white/5 p-8 rounded-lg space-y-6 hover:border-amber-500/30 transition duration-500">
+                <div class="bg-white dark:bg-black border border-gray-200 dark:border-white/5 p-8 rounded-lg space-y-6 hover:border-amber-500/30 transition duration-500 shadow-lg dark:shadow-none">
                     <div class="flex text-amber-500 space-x-1"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                    <p class="text-gray-300 italic leading-relaxed">"Паното, което поръчах за нашия офис, напълно промени атмосферата. Детайлите са невероятни и всеки клиент пита за него."</p>
-                    <div class="flex items-center gap-4 pt-4 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-amber-500">М</div>
+                    <p class="text-zinc-600 dark:text-gray-300 italic leading-relaxed">"Паното напълно промени атмосферата. Детайлите са невероятни."</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center font-bold text-amber-500">М</div>
                         <div>
-                            <p class="text-white text-sm font-bold">Мария С.</p>
-                            <p class="text-gray-600 text-[10px] uppercase tracking-tighter">Интериорен Дизайнер</p>
+                            <p class="text-zinc-900 dark:text-white text-sm font-bold">Мария С.</p>
+                            <p class="text-zinc-500 dark:text-gray-600 text-[10px] uppercase tracking-tighter">Дизайнер</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-black border border-white/5 p-8 rounded-lg space-y-6 hover:border-amber-500/30 transition duration-500">
+                <div class="bg-white dark:bg-black border border-gray-200 dark:border-white/5 p-8 rounded-lg space-y-6 hover:border-amber-500/30 transition duration-500 shadow-lg dark:shadow-none">
                     <div class="flex text-amber-500 space-x-1"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                    <p class="text-gray-300 italic leading-relaxed">"Професионално отношение от консултацията до монтажа. Паното в хола ни е истинско бижу. Благодаря на екипа на MANO!"</p>
-                    <div class="flex items-center gap-4 pt-4 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-amber-500">Г</div>
+                    <p class="text-zinc-600 dark:text-gray-300 italic leading-relaxed">"Професионално отношение. Паното в хола ни е истинско бижу."</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center font-bold text-amber-500">Г</div>
                         <div>
-                            <p class="text-white text-sm font-bold">Георги И.</p>
-                            <p class="text-gray-600 text-[10px] uppercase tracking-tighter">Частен Клиент</p>
+                            <p class="text-zinc-900 dark:text-white text-sm font-bold">Георги И.</p>
+                            <p class="text-zinc-500 dark:text-gray-600 text-[10px] uppercase tracking-tighter">Клиент</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-black border border-white/5 p-8 rounded-lg space-y-6 hover:border-amber-500/30 transition duration-500">
+                <div class="bg-white dark:bg-black border border-gray-200 dark:border-white/5 p-8 rounded-lg space-y-6 hover:border-amber-500/30 transition duration-500 shadow-lg dark:shadow-none">
                     <div class="flex text-amber-500 space-x-1"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                    <p class="text-gray-300 italic leading-relaxed">"Уникално изкуство. Търсехме нещо различно за нашия хотел и Mano Panelli надминаха очакванията ни по отношение на стил."</p>
-                    <div class="flex items-center gap-4 pt-4 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-amber-500">Х</div>
+                    <p class="text-zinc-600 dark:text-gray-300 italic leading-relaxed">"Mano Panelli надминаха очакванията ни за стил в хотела."</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center font-bold text-amber-500">Х</div>
                         <div>
-                            <p class="text-white text-sm font-bold">Хотел "Кабиле"</p>
-                            <p class="text-gray-600 text-[10px] uppercase tracking-tighter">Мениджмънт</p>
+                            <p class="text-zinc-900 dark:text-white text-sm font-bold">Хотел "Кабиле"</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="mt-16 text-center">
-                <p class="text-gray-500 text-sm">Присъединете се към над 970 последователи във Facebook за още вдъхновение.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="group relative overflow-hidden rounded-lg border border-white/5">
-                <img src="img/showroom.jpg" alt="Mano Panelli Showroom" class="w-full h-full object-cover">
-                <div class="absolute bottom-4 left-4 bg-black/80 px-4 py-2 text-[10px] uppercase tracking-widest border border-amber-500/50">
-                    Нашият Шоурум
-                </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-lg border border-white/5">
-                <img src="img/coolddarkpic.jpg" alt="Luxury Interior Detail" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
-                    <p class="brand-font text-2xl text-gold-gradient tracking-widest">Дълбочина и Светлина</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="order" class="py-32 bg-white text-black">
+    <section id="order" class="py-32 bg-white dark:bg-white text-black transition-colors duration-300">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="brand-font text-4xl md:text-6xl mb-8">Започнете Своя Проект</h2>
             <p class="text-xl mb-12 text-zinc-600 italic">
@@ -268,36 +311,25 @@
             <form class="space-y-6 text-left max-w-lg mx-auto">
                 <div>
                     <label class="uppercase text-[10px] font-bold tracking-widest ml-2">Име</label>
-                    <input type="text" class="w-full border-b-2 border-black p-4 focus:outline-none focus:border-amber-600 transition text-lg">
+                    <input type="text" class="w-full border-b-2 border-black p-4 focus:outline-none focus:border-amber-600 transition text-lg bg-transparent">
                 </div>
                 <div>
                     <label class="uppercase text-[10px] font-bold tracking-widest ml-2">Телефон</label>
-                    <input type="tel" class="w-full border-b-2 border-black p-4 focus:outline-none focus:border-amber-600 transition text-lg">
+                    <input type="tel" class="w-full border-b-2 border-black p-4 focus:outline-none focus:border-amber-600 transition text-lg bg-transparent">
                 </div>
-                <button class="w-full bg-black text-white py-6 font-black uppercase tracking-widest hover:bg-amber-600 transition">Заяви консултация &rarr;</button>
+                <button class="w-full bg-black text-white py-6 font-black uppercase tracking-widest hover:bg-amber-600 transition">Заяви консултация →</button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-black text-white border-t border-amber-900/20 pt-20 pb-10">
+    <footer class="bg-zinc-900 dark:bg-black text-white border-t border-amber-900/20 pt-20 pb-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
-                
                 <div class="space-y-6">
                     <div class="brand-font text-2xl text-gold-gradient font-bold">MANO PANELLI</div>
                     <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
                         Ние не просто създаваме декор. Ние създаваме характер за вашите пространства.
                     </p>
-                    <div class="flex space-x-5">
-                        <a href="https://www.instagram.com/mano_design_mano/" target="_blank" class="text-gray-400 hover:text-amber-500 transition-all">
-                            <span class="sr-only">Instagram</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="https://www.facebook.com/manopannelli" target="_blank" class="text-gray-400 hover:text-amber-500 transition-all">
-                            <span class="sr-only">Facebook</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                    </div>
                 </div>
 
                 <div class="space-y-6">
@@ -319,10 +351,7 @@
                 </div>
 
                 <div class="w-full h-64 rounded-lg overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition duration-500">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.54471960256!2d26.502847176541675!3d42.48000419133871!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!3f0!3m2!1i1024!2i1024!4f13.1!3m3!1m2!1s0x40a634e000000000%3A0x0!2zNDLCsDI4JzQ4LjAiTiAyNsKwMzAnMTguMyJF!5e0!3m2!1sbg!2sbg!4v1700000000000!5m2!1sbg!2sbg" 
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.54471960256!2d26.502847176541675!3d42.48000419133871!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!3f0!3m2!1i1024!2i1024!4f13.1!3m3!1m2!1s0x40a634e000000000%3A0x0!2zNDLCsDI4JzQ4LjAiTiAyNsKwMzAnMTguMyJF!5e0!3m2!1sbg!2sbg!4v1700000000000!5m2!1sbg!2sbg" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
 
@@ -335,16 +364,18 @@
         </div>
     </footer>
 
-    <div id="cookie-banner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md bg-zinc-900 border border-amber-900/30 p-6 rounded-lg shadow-2xl z-[1000] hidden">
+    <div id="cookie-banner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md bg-white dark:bg-zinc-900 border border-gray-200 dark:border-amber-900/30 p-6 rounded-lg shadow-2xl z-[1000] hidden">
         <h4 class="brand-font text-amber-500 mb-2 uppercase tracking-widest text-sm font-bold">Поверителност</h4>
-        <p class="text-gray-400 text-xs leading-relaxed mb-6">
-            Използваме бисквитки, за да подобрим изживяването ви и да анализираме трафика на нашия дигитален арт център.
+        <p class="text-zinc-600 dark:text-gray-400 text-xs leading-relaxed mb-6">
+            Използваме бисквитки, за да подобрим изживяването ви.
         </p>
         <div class="flex gap-3">
             <button onclick="acceptCookies()" class="flex-1 bg-gold-gradient text-black text-[10px] font-black py-3 uppercase tracking-widest hover:scale-105 transition">Приемам</button>
-            <button onclick="rejectCookies()" class="flex-1 border border-white/10 text-white text-[10px] font-black py-3 uppercase tracking-widest hover:bg-white/5 transition">Отказвам</button>
+            <button onclick="rejectCookies()" class="flex-1 border border-gray-300 dark:border-white/10 text-zinc-800 dark:text-white text-[10px] font-black py-3 uppercase tracking-widest hover:bg-gray-100 dark:hover:bg-white/5 transition">Отказвам</button>
         </div>
     </div>
+
+    <script src="js/main.js"></script>
 
 </body>
 </html>

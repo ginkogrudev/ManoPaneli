@@ -3,7 +3,6 @@
 :root {
     --gold-primary: #f59e0b; /* Amber 500 */
     --gold-secondary: #d97706; /* Amber 600 */
-    --dark-bg: #0a0a0a;
 }
 
 /* Custom Gradients */
@@ -11,7 +10,7 @@
     background: linear-gradient(to right, #f59e0b, #fbbf24, #d97706);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text; /* Standard property for compatibility */
+    background-clip: text;
 }
 
 .bg-gold-gradient {
@@ -22,9 +21,8 @@
     border-color: rgba(245, 158, 11, 0.3);
 }
 
-/* Glassmorphism for Mobile Menu */
+/* Glassmorphism */
 .mobile-glass {
-    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -32,10 +30,4 @@
 /* Global Smoothness */
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--dark-bg);
-    color: #fff;
-    font-family: 'Inter', sans-serif; /* Fallback */
 }
