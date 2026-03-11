@@ -229,23 +229,27 @@
         </div>
     </section>
 
-    <section id="order" class="py-32 bg-white dark:bg-white text-black transition-colors duration-300">
+    <section id="order" class="py-32 bg-zinc-50 dark:bg-[#0f0f0f] border-t border-gray-200 dark:border-white/5 transition-colors duration-300">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="brand-font text-4xl md:text-6xl mb-8">Start Your Project</h2>
-            <p class="text-xl mb-12 text-zinc-600 italic">
-                Pricing for handmade art starts at 500 BGN per month (for 4 months). 
-                No hidden fees. Just pure art.
+            <h2 class="brand-font text-4xl md:text-5xl mb-8 uppercase text-zinc-900 dark:text-white">Make a Project Inquiry</h2>
+            <p class="text-lg mb-12 text-zinc-600 dark:text-gray-400">
+                Contact us to discuss the scale, colors, and specifics of your space.
             </p>
-            <form class="space-y-6 text-left max-w-lg mx-auto">
+            
+            <form action="https://formsubmit.co/mano_design@abv.bg" method="POST" class="space-y-6 text-left max-w-lg mx-auto">
+                <input type="hidden" name="_subject" value="New Inquiry from Mano Panelli (EU)!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://manopanelli.com/index-eu.html">
+
                 <div>
-                    <label class="uppercase text-[10px] font-bold tracking-widest ml-2">Name</label>
-                    <input type="text" class="w-full border-b-2 border-black p-4 focus:outline-none focus:border-amber-600 transition text-lg bg-transparent">
+                    <label class="uppercase text-[10px] font-bold tracking-widest ml-2 text-zinc-500 dark:text-gray-500">Name / Venue</label>
+                    <input type="text" name="Name" required class="w-full border-b-2 border-gray-300 dark:border-white/20 p-4 focus:outline-none focus:border-amber-500 transition text-lg bg-transparent text-zinc-900 dark:text-white">
                 </div>
                 <div>
-                    <label class="uppercase text-[10px] font-bold tracking-widest ml-2">Phone</label>
-                    <input type="tel" class="w-full border-b-2 border-black p-4 focus:outline-none focus:border-amber-600 transition text-lg bg-transparent">
+                    <label class="uppercase text-[10px] font-bold tracking-widest ml-2 text-zinc-500 dark:text-gray-500">Phone</label>
+                    <input type="tel" name="Phone" required class="w-full border-b-2 border-gray-300 dark:border-white/20 p-4 focus:outline-none focus:border-amber-500 transition text-lg bg-transparent text-zinc-900 dark:text-white">
                 </div>
-                <button class="w-full bg-black text-white py-6 font-black uppercase tracking-widest hover:bg-amber-600 transition">Request Consultation →</button>
+                <button type="submit" class="w-full bg-amber-500 text-black py-6 font-black uppercase tracking-widest hover:bg-amber-600 hover:text-white transition shadow-lg mt-4">Send Inquiry →</button>
             </form>
         </div>
     </section>
@@ -259,12 +263,16 @@
                         We don't just create decor. We create character for your spaces.
                     </p>
                 </div>
-                <div class="space-y-6">
+               <div class="space-y-6">
                     <h3 class="text-xs uppercase tracking-[0.3em] font-bold text-amber-500">Contact</h3>
                     <ul class="space-y-4">
                         <li class="flex items-center space-x-4">
-                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Tel:</span>
-                            <a href="tel:+359888649845" class="text-lg hover:text-amber-500 transition">+359 88 864 9845</a>
+                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Tel 1:</span>
+                            <a href="tel:0888649845" class="text-lg hover:text-amber-500 transition">+359 88 864 9845</a>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Tel 2:</span>
+                            <a href="tel:0877712112" class="text-lg hover:text-amber-500 transition">+359 87 771 2112</a>
                         </li>
                         <li class="flex items-center space-x-4">
                             <span class="text-gray-500 text-xs uppercase font-bold w-12">Email:</span>
@@ -272,7 +280,7 @@
                         </li>
                         <li class="flex items-start space-x-4">
                             <span class="text-gray-500 text-xs uppercase font-bold w-12 pt-1">Address:</span>
-                            <span class="text-gray-400">"Targovska" St. 35, fl.2 <br> 8600 Yambol, Bulgaria</span>
+                            <span class="text-gray-400">"Han Tervel" 10 <br> 8600 Yambol, Bulgaria</span>
                         </li>
                     </ul>
                 </div>

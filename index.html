@@ -302,24 +302,25 @@
         </div>
     </section>
 
-    <section id="order" class="py-32 bg-white dark:bg-white text-black transition-colors duration-300">
+  <section id="order" class="py-32 bg-zinc-50 dark:bg-[#0f0f0f] border-t border-gray-200 dark:border-white/5 transition-colors duration-300">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="brand-font text-4xl md:text-6xl mb-8">Започнете Своя Проект</h2>
-            <p class="text-xl mb-12 text-zinc-600 italic">
-                Цената за ръчна изработка започва от 500 BGN на месец (за 4 месеца). 
-                Без скрити такси. Само чисто изкуство.
+            <h2 class="brand-font text-4xl md:text-5xl mb-8 uppercase text-zinc-900 dark:text-white">Направете запитване за проект</h2>
+            <p class="text-lg mb-12 text-zinc-600 dark:text-gray-400">
+                Свържете се с нас, за да обсъдим мащаба, цветовете и спецификите на вашето пространство.
             </p>
             
-            <form class="space-y-6 text-left max-w-lg mx-auto">
-                <div>
-                    <label class="uppercase text-[10px] font-bold tracking-widest ml-2">Име</label>
-                    <input type="text" class="w-full border-b-2 border-black p-4 focus:outline-none focus:border-amber-600 transition text-lg bg-transparent">
+            <form action="https://formsubmit.co/mano_design@abv.bg" method="POST" class="space-y-6 text-left max-w-lg mx-auto">
+                <input type="hidden" name="_subject" value="Ново запитване от сайта Mano Panelli!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://manopanelli.com/"> <div>
+                    <label class="uppercase text-[10px] font-bold tracking-widest ml-2 text-zinc-500 dark:text-gray-500">Име / Обект</label>
+                    <input type="text" name="Име" required class="w-full border-b-2 border-gray-300 dark:border-white/20 p-4 focus:outline-none focus:border-amber-500 transition text-lg bg-transparent text-zinc-900 dark:text-white">
                 </div>
                 <div>
-                    <label class="uppercase text-[10px] font-bold tracking-widest ml-2">Телефон</label>
-                    <input type="tel" class="w-full border-b-2 border-black p-4 focus:outline-none focus:border-amber-600 transition text-lg bg-transparent">
+                    <label class="uppercase text-[10px] font-bold tracking-widest ml-2 text-zinc-500 dark:text-gray-500">Телефон</label>
+                    <input type="tel" name="Телефон" required class="w-full border-b-2 border-gray-300 dark:border-white/20 p-4 focus:outline-none focus:border-amber-500 transition text-lg bg-transparent text-zinc-900 dark:text-white">
                 </div>
-                <button class="w-full bg-black text-white py-6 font-black uppercase tracking-widest hover:bg-amber-600 transition">Заяви консултация →</button>
+                <button type="submit" class="w-full bg-amber-500 text-black py-6 font-black uppercase tracking-widest hover:bg-amber-600 hover:text-white transition shadow-lg mt-4">Изпрати запитване →</button>
             </form>
         </div>
     </section>
@@ -339,8 +340,12 @@
                     <h3 class="text-xs uppercase tracking-[0.3em] font-bold text-amber-500">Контакт</h3>
                     <ul class="space-y-4">
                         <li class="flex items-center space-x-4">
-                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Тел:</span>
-                            <a href="tel:+359888649845" class="text-lg hover:text-amber-500 transition">+359 88 864 9845</a>
+                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Тел 1:</span>
+                            <a href="tel:0888649845" class="text-lg hover:text-amber-500 transition">088 864 9845</a>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Тел 2:</span>
+                            <a href="tel:0877712112" class="text-lg hover:text-amber-500 transition">087 771 2112</a>
                         </li>
                         <li class="flex items-center space-x-4">
                             <span class="text-gray-500 text-xs uppercase font-bold w-12">Email:</span>
