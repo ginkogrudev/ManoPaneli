@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied', 'ad_user_data': 'denied',
+            'ad_personalization': 'denied', 'analytics_storage': 'denied'
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFLK788D98"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TFLK788D98');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mano Design | Portfolio & Projects</title>
+    
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { gold: { 500: '#f59e0b', 600: '#d97706' } } } }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
+    
+    <style>
+        h1, h2, h3, .brand-font { font-family: 'Cinzel', serif; }
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom cursors for Lightbox */
+        .cursor-left { cursor: w-resize; }
+        .cursor-right { cursor: e-resize; }
+    </style>
+</head>
+<body class="bg-gray-50 text-zinc-900 dark:bg-[#0a0a0a] dark:text-white overflow-x-hidden antialiased transition-colors duration-300 pt-24">
+
+    <nav class="fixed top-0 w-full z-[100] bg-white/90 dark:bg-black/90 border-b border-gray-200 dark:border-amber-900/30 backdrop-blur-md transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index-eu.html" class="brand-font text-xl md:text-2xl tracking-[0.15em] text-gold-gradient font-bold uppercase whitespace-nowrap">
+                Mano Design
+            </a>
+            
+            <div class="hidden md:flex items-center gap-10">
+                <div class="flex gap-8 text-[10px] uppercase tracking-[0.25em] font-bold text-zinc-600 dark:text-white">
+                    <a href="index-eu.html" class="hover:text-amber-500 transition">Home</a>
+                    <a href="index-eu.html#features" class="hover:text-amber-500 transition">Features</a>
+                    <a href="index-eu.html#process" class="hover:text-amber-500 transition">Process</a>
+                    <a href="portfolio-eu.html" class="hover:text-amber-500 transition">Gallery</a>
+                </div>
+
+                <div class="flex items-center gap-4 border-l border-gray-300 dark:border-white/20 pl-6">
+                    <button id="theme-toggle" class="text-zinc-600 dark:text-white hover:text-amber-500 transition focus:outline-none">
+                        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    </button>
+                    <div class="text-[10px] font-bold uppercase tracking-widest flex gap-2">
+                        <a href="portfolio.html" class="text-gray-400 hover:text-black dark:hover:text-white transition">BG</a>
+                        <span class="text-gray-300 dark:text-gray-600">|</span>
+                        <span class="text-amber-600">EN</span>
+                    </div>
+                </div>
+
+                <a href="index-eu.html#order" class="flex items-center justify-center text-amber-600 border border-amber-600/50 px-6 py-2 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-amber-600 hover:text-white dark:hover:text-black transition">
+                    Inquiry
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-zinc-800 dark:text-white focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/95 dark:bg-[#0a0a0a]/95 border-b border-gray-200 dark:border-white/10 py-10 flex-col items-center space-y-8 text-xl font-bold uppercase tracking-widest md:hidden shadow-xl">
+            <a href="index-eu.html" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Home</a>
+            <a href="index-eu.html#features" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Features</a>
+            <a href="index-eu.html#process" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Process</a>
+            <div class="flex gap-6 items-center">
+                <a href="portfolio.html" class="text-zinc-400">BG</a>
+                <span class="text-amber-500">EN</span>
+            </div>
+            <a href="index-eu.html#order" class="mobile-link text-amber-500">Inquiry</a>
+        </div>
+    </nav>
+
+    <section class="py-20 text-center px-6">
+        <h1 class="brand-font text-4xl md:text-6xl font-bold mb-4 uppercase text-zinc-900 dark:text-white">Our <span class="text-gold-gradient">Portfolio</span></h1>
+        <p class="text-zinc-500 dark:text-gray-400 max-w-2xl mx-auto">Click on any image to view it in full screen detail.</p>
+    </section>
+
+    <section class="pb-32 px-6 max-w-7xl mx-auto">
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/loby-hero-1.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Lobby">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                    <span class="text-white text-xs uppercase tracking-widest border border-white px-4 py-2">Expand</span>
+                </div>
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/black-living-room-mano-paneli-1.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Black Living Room">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-white text-xs uppercase tracking-widest border border-white px-4 py-2">Expand</span></div>
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/pink-bedroom-mano-paneli-1.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Pink Bedroom">
+            </div>       
+            
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/mano-paneli-art-hotel-entrance-1.png" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Hotel Entrance 1">
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/mano-paneli-art-hotel-entrance-2.png" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Hotel Entrance 2">
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/grayish-living-mano-paneli-1.jpeg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Gray Living Room">
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/hotel-bath-1.png" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Hotel Bath">
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/living-room-dark-1.jpeg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Dark Living Room">
+            </div>
+            
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/pin-miror-1.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Mirror Details">
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/mano-paneli-daycare.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Daycare">
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/showroom.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Showroom">
+            </div>
+            
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/white-living-room-1.jpeg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="White Living Room">
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
+                <img src="img/mano-paneli-1.jpeg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Abstract Panel">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 bg-zinc-100 dark:bg-[#0f0f0f] border-y border-gray-200 dark:border-white/5 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="brand-font text-3xl md:text-5xl mb-6 uppercase text-zinc-900 dark:text-white">Want to see <span class="text-gold-gradient">More?</span></h2>
+            <p class="text-zinc-600 dark:text-gray-400 mb-10 text-lg">
+                We work on unique projects every day. Follow our creative process in real-time, watch installation videos, and get inspired on our social media.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="https://www.instagram.com/mano_design_mano/" target="_blank" class="w-full md:w-auto flex items-center justify-center gap-4 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white px-10 py-5 font-bold uppercase tracking-widest hover:scale-105 transition shadow-lg rounded-sm">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Follow Us
+                </a>
+                
+                <a href="https://www.facebook.com/profile.php?id=100064560709611" target="_blank" class="w-full md:w-auto flex items-center justify-center gap-4 bg-[#1877F2] text-white px-10 py-5 font-bold uppercase tracking-widest hover:scale-105 transition shadow-lg rounded-sm">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Follow Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-900 dark:bg-black text-white border-t border-amber-900/20 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
+                
+                <div class="space-y-6">
+                    <div class="brand-font text-2xl text-gold-gradient font-bold uppercase">Mano Design</div>
+                    <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
+                        We don't just create decor. We create character for your spaces.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xs uppercase tracking-[0.3em] font-bold text-amber-500">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-4">
+                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Tel 1:</span>
+                            <a href="tel:+359888649845" class="text-lg hover:text-amber-500 transition">+359 88 864 9845</a>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Tel 2:</span>
+                            <a href="tel:+359877712112" class="text-lg hover:text-amber-500 transition">+359 87 771 2112</a>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Email:</span>
+                            <a href="mailto:mano_design@abv.bg" class="text-lg hover:text-amber-500 transition">mano_design@abv.bg</a>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-gray-500 text-xs uppercase font-bold w-12 pt-1">Address:</span>
+                            <span class="text-gray-400">"Han Tervel" St. 10 <br> 8600 Yambol, Bulgaria</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xs uppercase tracking-[0.3em] font-bold text-amber-500">Follow Us</h3>
+                    <p class="text-gray-500 text-sm mb-4">See our latest projects and workflow in real-time.</p>
+                    <div class="flex flex-col space-y-4">
+                        <a href="https://www.instagram.com/mano_design_mano/" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-amber-500 transition group">
+                            <div class="p-3 bg-zinc-800 group-hover:bg-amber-500/10 rounded-full transition">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </div>
+                            <span class="font-bold tracking-widest uppercase">Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100064560709611" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-amber-500 transition group">
+                            <div class="p-3 bg-zinc-800 group-hover:bg-amber-500/10 rounded-full transition">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </div>
+                            <span class="font-bold tracking-widest uppercase">Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-10 text-[10px] uppercase tracking-widest text-gray-600">
+                <p>© 2026 MANO DESIGN. ALL RIGHTS RESERVED.</p>
+                <div class="mt-4 md:mt-0">
+                    Built by <a href="https://ginkogrudev.com" target="_blank" class="hover:text-amber-500 font-bold transition">GG Solutions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl hidden flex items-center justify-center transition-opacity duration-300 opacity-0">
+        
+        <button id="close-lightbox" class="absolute top-6 right-6 z-50 text-white hover:text-amber-500 transition focus:outline-none p-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <div id="lightbox-counter" class="absolute top-8 left-8 z-50 text-white/50 text-sm tracking-[0.3em] font-bold">1 / 17</div>
+
+        <img id="lightbox-img" src="" alt="Gallery Preview" class="max-h-[90vh] max-w-[90vw] object-contain shadow-2xl transition-transform duration-300 scale-95">
+
+        <div id="lightbox-prev" class="absolute inset-y-0 left-0 w-1/2 z-40 cursor-left flex items-center group">
+            <div class="ml-8 bg-black/50 p-4 rounded-full text-white opacity-0 group-hover:opacity-100 transition hidden md:block">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </div>
+        </div>
+        <div id="lightbox-next" class="absolute inset-y-0 right-0 w-1/2 z-40 cursor-right flex items-center justify-end group">
+            <div class="mr-8 bg-black/50 p-4 rounded-full text-white opacity-0 group-hover:opacity-100 transition hidden md:block">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-banner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md bg-white dark:bg-zinc-900 border border-gray-200 dark:border-amber-900/30 p-6 rounded-lg shadow-2xl z-[1000] hidden">
+        <h4 class="brand-font text-amber-500 mb-2 uppercase tracking-widest text-sm font-bold">Privacy</h4>
+        <p class="text-zinc-600 dark:text-gray-400 text-xs leading-relaxed mb-6">
+            We use cookies to improve your experience.
+        </p>
+        <div class="flex gap-3">
+            <button onclick="acceptCookies()" class="flex-1 bg-gold-gradient text-black text-[10px] font-black py-3 uppercase tracking-widest hover:scale-105 transition">Accept</button>
+            <button onclick="rejectCookies()" class="flex-1 border border-gray-300 dark:border-white/10 text-zinc-800 dark:text-white text-[10px] font-black py-3 uppercase tracking-widest hover:bg-gray-100 dark:hover:bg-white/5 transition">Reject</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
