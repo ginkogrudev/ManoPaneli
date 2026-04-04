@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg" class="scroll-smooth dark">
+<html lang="bg" class="scroll-smooth">
 <head>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -11,284 +11,501 @@
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFLK788D98"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-TFLK788D98');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TFLK788D98');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mano Panelli | Портфолио и Проекти</title>
-    
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    
+    <title>Портфолио | Mano Design — Авторски Епоксидни Пана</title>
+    <meta name="description" content="Разгледайте портфолиото на Mano Design — авторски епоксидни пана за хотели, ресторанти, нощни клубове и луксозни домове.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="img/favicon.webp">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: { extend: { colors: { gold: { 500: '#f59e0b', 600: '#d97706' } } } }
         }
     </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
-    
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600;900&display=swap');
+
         h1, h2, h3, .brand-font { font-family: 'Cinzel', serif; }
-        body { font-family: 'Inter', sans-serif; }
-        /* Custom cursors for Lightbox */
-        .cursor-left { cursor: w-resize; }
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; }
+
+        .text-gold-gradient {
+            background: linear-gradient(to right, #f59e0b, #fbbf24, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cta-main {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            box-shadow: 0 8px 32px rgba(245,158,11,0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 48px rgba(245,158,11,0.4);
+        }
+        .gallery-item { overflow: hidden; }
+        .gallery-item img { transition: transform 0.6s ease; will-change: transform; display: block; width: 100%; }
+        .gallery-item:hover img { transform: scale(1.06); }
+
+        .scroll-reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .cursor-left  { cursor: w-resize; }
         .cursor-right { cursor: e-resize; }
+
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .animate-pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+        #lightbox-img { transition: opacity 0.15s ease, transform 0.3s ease; }
     </style>
 </head>
-<body class="bg-gray-50 text-zinc-900 dark:bg-[#0a0a0a] dark:text-white overflow-x-hidden antialiased transition-colors duration-300 pt-24">
+<body class="antialiased overflow-x-hidden pt-[73px]">
 
-   <nav class="fixed top-0 w-full z-[100] bg-white/90 dark:bg-black/90 border-b border-gray-200 dark:border-amber-900/30 backdrop-blur-md transition-colors duration-300">
+    <!-- NAV -->
+    <nav id="main-nav" class="fixed top-0 w-full z-[100] bg-black/90 border-b border-amber-900/30 backdrop-blur-md transition-shadow duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="brand-font text-xl md:text-2xl tracking-[0.15em] text-gold-gradient font-bold uppercase whitespace-nowrap">
-                Mano Panelli
+                Mano Design
             </a>
-            
             <div class="hidden md:flex items-center gap-10">
-                <div class="flex gap-8 text-[10px] uppercase tracking-[0.25em] font-bold text-zinc-600 dark:text-white">
+                <div class="flex gap-8 text-[10px] uppercase tracking-[0.25em] font-bold text-white/80">
                     <a href="index.html" class="hover:text-amber-500 transition">Начало</a>
-                    <a href="index.html#features" class="hover:text-amber-500 transition">Предимства</a>
-                    <a href="index.html#process" class="hover:text-amber-500 transition">Процесът</a>
-                    <a href="portfolio.html" class="hover:text-amber-500 transition">Галерия</a>
+                    <a href="portfolio.html" class="text-amber-500">Портфолио</a>
+                    <a href="case-study-ekaterina.html" class="hover:text-amber-500 transition">Реален Проект</a>
                 </div>
-
-                <div class="flex items-center gap-4 border-l border-gray-300 dark:border-white/20 pl-6">
-                    <button id="theme-toggle" class="text-zinc-600 dark:text-white hover:text-amber-500 transition focus:outline-none">
-                        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    </button>
-                    <div class="text-[10px] font-bold uppercase tracking-widest flex gap-2">
-                        <span class="text-amber-600">BG</span>
-                        <span class="text-gray-300 dark:text-gray-600">|</span>
-                        <a href="portfolio-eu.html" class="text-gray-400 hover:text-black dark:hover:text-white transition">EN</a>
-                    </div>
-                </div>
-
-                <a href="index.html#order" class="flex items-center justify-center text-amber-600 border border-amber-600/50 px-6 py-2 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-amber-600 hover:text-white dark:hover:text-black transition">
-                    Запитване
+                <a href="contact.html" class="cta-main flex items-center justify-center text-black px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm">
+                    Безплатна Визуализация
                 </a>
             </div>
-
-            <button id="mobile-menu-btn" class="md:hidden text-zinc-800 dark:text-white focus:outline-none p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <button id="mobile-menu-btn" aria-label="Отвори меню" aria-expanded="false" class="md:hidden text-white focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
         </div>
-
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/95 dark:bg-[#0a0a0a]/95 border-b border-gray-200 dark:border-white/10 py-10 flex-col items-center space-y-8 text-xl font-bold uppercase tracking-widest md:hidden shadow-xl">
-            <a href="index.html" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Начало</a>
-            <a href="index.html#features" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Предимства</a>
-            <a href="index.html#process" class="mobile-link hover:text-amber-500 text-zinc-800 dark:text-white">Процесът</a>
-            <div class="flex gap-6 items-center">
-                <span class="text-amber-500">BG</span>
-                <a href="portfolio-eu.html" class="text-zinc-400">EN</a>
-            </div>
-            <a href="index.html#order" class="mobile-link text-amber-500">Запитване</a>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#0a0a0a]/95 border-b border-white/10 py-10 flex-col items-center space-y-7 text-sm font-bold uppercase tracking-widest md:hidden shadow-2xl">
+            <a href="index.html" class="mobile-link hover:text-amber-500 text-white transition">Начало</a>
+            <a href="portfolio.html" class="mobile-link text-amber-500">Портфолио</a>
+            <a href="case-study-ekaterina.html" class="mobile-link hover:text-amber-500 text-white transition">Реален Проект</a>
+            <a href="contact.html" class="cta-main text-black px-8 py-3 text-xs font-bold uppercase tracking-widest rounded-sm">
+                Безплатна Визуализация
+            </a>
         </div>
     </nav>
 
-    <section class="py-20 text-center px-6">
-        <h1 class="brand-font text-4xl md:text-6xl font-bold mb-4 uppercase text-zinc-900 dark:text-white">Нашето <span class="text-gold-gradient">Портфолио</span></h1>
-        <p class="text-zinc-500 dark:text-gray-400 max-w-2xl mx-auto">Кликнете върху всяка снимка, за да я разгледате в детайли на цял екран.</p>
+    <!-- PAGE HEADER -->
+    <section class="py-20 text-center px-6 bg-[#0a0a0a]">
+        <div class="scroll-reveal">
+            <p class="text-[10px] uppercase tracking-[0.35em] text-amber-500 mb-4 font-bold">Избрани Творби</p>
+            <h1 class="brand-font text-4xl md:text-6xl font-bold mb-5 uppercase text-white">
+                Нашето <span class="text-gold-gradient">Портфолио</span>
+            </h1>
+            <p class="text-white/50 max-w-xl mx-auto text-sm leading-relaxed">
+                Всяко пано е уникален 1/1 екземпляр. Кликнете върху снимка, за да я разгледате на цял екран.
+            </p>
+        </div>
     </section>
 
-    <section class="py-24 bg-zinc-900 dark:bg-[#111] border-y border-amber-900/20 transition-colors duration-300 relative overflow-hidden">
-        <div class="absolute -right-20 -top-20 w-96 h-96 bg-amber-600/10 blur-[100px] z-0 pointer-events-none"></div>
-        
+    <!-- FEATURED PROJECT -->
+    <section class="py-20 bg-[#111] border-y border-white/5 relative overflow-hidden">
+        <div class="absolute -right-24 -top-24 w-96 h-96 bg-amber-600/8 blur-[120px] pointer-events-none" aria-hidden="true"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <div class="inline-block bg-amber-500 text-black px-4 py-1 text-[10px] font-black uppercase tracking-widest">Featured Case Study</div>
-                    <h2 class="brand-font text-4xl md:text-5xl leading-tight text-white uppercase">
-                        От Абстрактно към <span class="text-gold-gradient">Реално</span>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+                <div class="scroll-reveal space-y-7">
+                    <div class="inline-flex items-center gap-2 border border-amber-500/30 bg-amber-500/10 text-amber-400 text-[10px] uppercase tracking-[0.3em] font-bold px-4 py-2 rounded-sm">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse-dot inline-block" aria-hidden="true"></span>
+                        Реален Проект · Ямбол, България
+                    </div>
+                    <h2 class="brand-font text-3xl md:text-4xl leading-tight text-white uppercase">
+                        От Абстрактно <br>към <span class="text-gold-gradient">Реално</span>
                     </h2>
-                    <p class="text-zinc-400 text-lg leading-relaxed">
-                        Често ни питат как нашите пана стоят в реална среда. Вижте как трансформирахме класическия дървен интериор на комплекс "Екатерина" в модерен епоксиден лукс, работейки рамо до рамо с дизайнери и строители.
+                    <p class="text-white/55 text-base leading-relaxed">
+                        Трансформирахме класическия дървен интериор на комплекс „Екатерина" в модерен епоксиден лукс — без спиране на работата на обекта, без разрушителен ремонт.
                     </p>
-                    <ul class="space-y-4 text-sm text-zinc-300 font-bold uppercase tracking-widest mb-8">
-                        <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Интеграция в мащабен ремонт</li>
-                        <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Облицовка на колони</li>
-                        <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Арт пана за основна зала</li>
+                    <ul class="space-y-3 text-sm font-bold uppercase tracking-widest">
+                        <li class="flex items-center gap-3 text-white/70">
+                            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            Интеграция в мащабен ремонт
+                        </li>
+                        <li class="flex items-center gap-3 text-white/70">
+                            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            Облицовка на колони
+                        </li>
+                        <li class="flex items-center gap-3 text-white/70">
+                            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            Арт пана за основна зала
+                        </li>
                     </ul>
-                    <a href="case-study-ekaterina.html" class="inline-block border-2 border-amber-500 text-amber-500 px-8 py-4 font-bold uppercase tracking-widest hover:bg-amber-500 hover:text-black transition shadow-[0_0_20px_rgba(245,158,11,0.2)] hover:shadow-[0_0_30px_rgba(245,158,11,0.4)]">
-                        Прочети целия казус &rarr;
+                    <a href="case-study-ekaterina.html" class="inline-flex items-center gap-2 border border-amber-500/50 text-amber-500 hover:bg-amber-500 hover:text-black font-bold text-[10px] uppercase tracking-[0.25em] px-8 py-4 transition rounded-sm">
+                        Виж Целия Проект
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
                 </div>
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-amber-500 rounded-lg transform translate-x-4 translate-y-4 opacity-20 group-hover:translate-x-2 group-hover:translate-y-2 transition duration-500"></div>
-                    <img src="img/Ekaterina-Yambol-Update/ekaterina-hero.jpg" alt="Ресторант Екатерина" class="relative rounded-lg shadow-2xl w-full object-cover z-10 transform group-hover:-translate-y-1 transition duration-500 h-[400px] md:h-[500px]">
-                    
-                    <div class="absolute bottom-6 left-6 z-20 bg-black/80 backdrop-blur border border-white/10 p-3 md:p-4 rounded shadow-xl flex items-center gap-4">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-zinc-600 grayscale"><img src="img/Ekaterina-Yambol-Update/ekaterina-old-1.jpg" class="w-full h-full object-cover" alt="Преди"></div>
-                        <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-amber-500"><img src="img/Ekaterina-Yambol-Update/ekaterina-new-1.jpg" class="w-full h-full object-cover" alt="След"></div>
+
+                <div class="scroll-reveal relative group" style="transition-delay:0.15s">
+                    <div class="absolute inset-0 bg-amber-500/15 rounded-sm transform translate-x-3 translate-y-3 group-hover:translate-x-1.5 group-hover:translate-y-1.5 transition duration-500" aria-hidden="true"></div>
+                    <div class="relative gallery-item rounded-sm shadow-2xl z-10 h-[380px] md:h-[480px]">
+                        <img
+                            src="img/Ekaterina-Yambol-Update/ekaterina-hero.webp"
+                            alt="Трансформация на ресторант Екатерина с авторски епоксидни пана"
+                            class="w-full h-full object-cover rounded-sm"
+                            width="800" height="480"
+                            loading="eager" fetchpriority="high" decoding="async"
+                        >
+                    </div>
+                    <div class="absolute bottom-5 left-5 z-20 bg-black/85 backdrop-blur border border-white/10 px-4 py-3 rounded-sm shadow-xl flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-sm overflow-hidden border border-white/20 grayscale shrink-0">
+                            <img src="img/Ekaterina-Yambol-Update/ekaterina-old-1.webp" class="w-full h-full object-cover" alt="Преди трансформацията" width="40" height="40" loading="lazy" decoding="async">
+                        </div>
+                        <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        <div class="w-10 h-10 rounded-sm overflow-hidden border border-amber-500/50 shrink-0">
+                            <img src="img/Ekaterina-Yambol-Update/ekaterina-new-1.webp" class="w-full h-full object-cover" alt="След трансформацията" width="40" height="40" loading="lazy" decoding="async">
+                        </div>
+                        <span class="text-[10px] uppercase tracking-widest text-white/40 font-bold ml-1">Преди / След</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="pb-32 px-6 max-w-7xl mx-auto">
-        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/loby-hero-1.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Lobby">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                    <span class="text-white text-xs uppercase tracking-widest border border-white px-4 py-2">Увеличи</span>
-                </div>
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/black-living-room-mano-paneli-1.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Black Living Room">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-white text-xs uppercase tracking-widest border border-white px-4 py-2">Увеличи</span></div>
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/pink-bedroom-mano-paneli-1.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Pink Bedroom">
-            </div>       
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/mano-paneli-art-hotel-entrance-1.png" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Hotel Entrance 1">
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/mano-paneli-art-hotel-entrance-2.png" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Hotel Entrance 2">
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/grayish-living-mano-paneli-1.jpeg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Gray Living Room">
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/hotel-bath-1.png" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Hotel Bath">
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/living-room-dark-1.jpeg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Dark Living Room">
-            </div>
-            
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/pin-miror-1.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Mirror Details">
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/mano-paneli-daycare.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Daycare">
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/showroom.jpg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Showroom">
-            </div>
-            
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/white-living-room-1.jpeg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="White Living Room">
-            </div>
-            <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group break-inside-avoid cursor-pointer">
-                <img src="img/mano-paneli-1.jpeg" class="w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" alt="Abstract Panel">
+    <!-- GALLERY GRID -->
+    <section class="py-20 px-6 bg-[#0a0a0a]" aria-labelledby="gallery-grid-heading">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-14 scroll-reveal">
+                <p class="text-[10px] uppercase tracking-[0.35em] text-amber-500 mb-3 font-bold">Всички Проекти</p>
+                <h2 id="gallery-grid-heading" class="brand-font text-3xl md:text-4xl text-white uppercase">
+                    Арт <span class="text-gold-gradient">В Действие</span>
+                </h2>
             </div>
 
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/loby-hero-1.webp" loading="lazy" decoding="async" alt="Авторски панел в хотелско лоби" width="600" height="800">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/black-living-room-mano-paneli-1.webp" loading="lazy" decoding="async" alt="Епоксиден панел в черна луксозна дневна" width="600" height="750">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/pink-bedroom-mano-paneli-1.webp" loading="lazy" decoding="async" alt="Авторски панел в розова спалня" width="600" height="800">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/mano-paneli-art-hotel-entrance-1.webp" loading="lazy" decoding="async" alt="Авторски панел на хотелски вход" width="600" height="700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/mano-paneli-art-hotel-entrance-2.webp" loading="lazy" decoding="async" alt="Детайл на хотелски панел" width="600" height="700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/grayish-living-mano-paneli-1.webp" loading="lazy" decoding="async" alt="Епоксиден панел в сив минималистичен интериор" width="600" height="750">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/hotel-bath-1.webp" loading="lazy" decoding="async" alt="Влагоустойчив панел в хотелска баня" width="600" height="700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/living-room-dark-1.webp" loading="lazy" decoding="async" alt="Авторски панел в тъмна луксозна дневна" width="600" height="800">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/pin-miror-1.webp" loading="lazy" decoding="async" alt="Огледален детайл на авторски панел" width="600" height="700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/mano-paneli-daycare.webp" loading="lazy" decoding="async" alt="Авторски панел в детски център" width="600" height="750">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/showroom.webp" loading="lazy" decoding="async" alt="Шоурум на Mano Design" width="600" height="700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/white-living-room-1.webp" loading="lazy" decoding="async" alt="Авторски панел в бяла дневна стая" width="600" height="800">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-sm shadow-lg break-inside-avoid cursor-pointer group">
+                    <img src="img/mano-paneli-1.webp" loading="lazy" decoding="async" alt="Абстрактен авторски епоксиден панел" width="600" height="750">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-sm">
+                        <span class="text-white text-[10px] uppercase tracking-widest border border-white/60 px-4 py-2">Увеличи</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    
-
-    <section class="py-24 bg-zinc-100 dark:bg-[#0f0f0f] border-y border-gray-200 dark:border-white/5 transition-colors duration-300">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="brand-font text-3xl md:text-5xl mb-6 uppercase text-zinc-900 dark:text-white">Искате да видите <span class="text-gold-gradient">Още?</span></h2>
-            <p class="text-zinc-600 dark:text-gray-400 mb-10 text-lg">
-                Всеки ден работим по нови уникални проекти. Проследете процеса ни на създаване в реално време, вижте видеа от монтажи и се вдъхновете в нашите социални мрежи.
+    <!-- SOCIAL CTA -->
+    <section class="py-24 bg-[#111] border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6 text-center scroll-reveal">
+            <p class="text-[10px] uppercase tracking-[0.35em] text-amber-500 mb-4 font-bold">Следвайте Процеса</p>
+            <h2 class="brand-font text-3xl md:text-4xl mb-5 uppercase text-white">
+                Искате да видите <span class="text-gold-gradient">Още?</span>
+            </h2>
+            <p class="text-white/50 mb-10 text-sm leading-relaxed max-w-xl mx-auto">
+                Всеки ден работим по нови проекти. Гледайте монтажи на живо, вижте процеса на изработка и се вдъхновете в нашите социални мрежи.
             </p>
-            
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-                <a href="https://www.instagram.com/mano_design_mano/" target="_blank" class="w-full md:w-auto flex items-center justify-center gap-4 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white px-10 py-5 font-bold uppercase tracking-widest hover:scale-105 transition shadow-lg rounded-sm">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    Последвайте ни
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://www.instagram.com/mano_design_mano/" target="_blank" rel="noopener noreferrer"
+                   class="w-full sm:w-auto flex items-center justify-center gap-3 text-white font-bold text-[10px] uppercase tracking-[0.2em] px-10 py-4 rounded-sm hover:scale-[1.03] transition shadow-lg"
+                   style="background: linear-gradient(135deg, #f59e0b 0%, #ec4899 50%, #7c3aed 100%);">
+                    <svg class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    Instagram @mano_design_mano
                 </a>
-                
-                <a href="https://www.facebook.com/manopannelli" target="_blank" class="w-full md:w-auto flex items-center justify-center gap-4 bg-[#1877F2] text-white px-10 py-5 font-bold uppercase tracking-widest hover:scale-105 transition shadow-lg rounded-sm">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    Следете ни
+                <a href="contact.html" class="cta-main w-full sm:w-auto flex items-center justify-center gap-3 text-black font-black text-[10px] uppercase tracking-[0.2em] px-10 py-4 rounded-sm">
+                    Заяви Визуализация →
                 </a>
             </div>
         </div>
     </section>
 
-   <footer class="bg-zinc-900 dark:bg-black text-white border-t border-amber-900/20 pt-20 pb-10">
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/10 pt-16 pb-10">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
-                
-                <div class="space-y-6">
-                    <div class="brand-font text-2xl text-gold-gradient font-bold uppercase">Mano Panelli</div>
-                    <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
-                        Ние не просто създаваме декор. Ние създаваме характер за вашите пространства.
-                    </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+
+                <div class="flex flex-col gap-5">
+                    <div class="brand-font text-lg tracking-[0.15em] text-gold-gradient font-bold uppercase">Mano Design</div>
+                    <p class="text-sm text-white/55 leading-relaxed">Ръчно изработени епоксидни пана, залепени директно на стената. Без ремонт. Без сондиране. Само ефект.</p>
+                    <div class="mt-auto pt-4 border-t border-white/10">
+                        <p class="text-[10px] uppercase tracking-[0.25em] text-white/30 mb-2 font-bold">Следвайте ни</p>
+                        <a href="https://www.instagram.com/mano_design_mano" target="_blank" rel="noopener noreferrer" aria-label="Instagram на Mano Design" class="inline-flex items-center gap-2 text-white/50 hover:text-amber-500 transition text-xs uppercase tracking-widest">
+                            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            @mano_design_mano
+                        </a>
+                    </div>
                 </div>
 
-                <div class="space-y-6">
-                    <h3 class="text-xs uppercase tracking-[0.3em] font-bold text-amber-500">Контакт</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center space-x-4">
-                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Тел:</span>
-                            <a href="tel:+359888649845" class="text-lg hover:text-amber-500 transition">+359 88 864 9845</a>
-                        </li>
-                        <li class="flex items-center space-x-4">
-                            <span class="text-gray-500 text-xs uppercase font-bold w-12">Email:</span>
-                            <a href="mailto:mano_design@abv.bg" class="text-lg hover:text-amber-500 transition">mano_design@abv.bg</a>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-gray-500 text-xs uppercase font-bold w-12 pt-1">Адрес:</span>
-                            <span class="text-gray-400">ул. "Хан Тервел" 10 <br> 8600 Ямбол, България</span>
-                        </li>
-                    </ul>
+                <div class="flex flex-col gap-5">
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">Контакти</p>
+                    <div class="flex flex-col gap-3">
+                        <a href="tel:+359888649845" class="group flex items-center gap-3 text-sm text-white/60 hover:text-amber-500 transition">
+                            <span class="w-7 h-7 rounded-sm bg-white/5 group-hover:bg-amber-500/10 flex items-center justify-center shrink-0 transition">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </span>
+                            <span>+359 88 864 9845 <span class="text-[10px] text-white/30 ml-1">/ Viber</span></span>
+                        </a>
+                        <a href="tel:+359877712112" class="group flex items-center gap-3 text-sm text-white/60 hover:text-amber-500 transition">
+                            <span class="w-7 h-7 rounded-sm bg-white/5 group-hover:bg-amber-500/10 flex items-center justify-center shrink-0 transition">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </span>
+                            +359 87 771 2112
+                        </a>
+                        <a href="mailto:mano_design@abv.bg" class="group flex items-center gap-3 text-sm text-white/60 hover:text-amber-500 transition">
+                            <span class="w-7 h-7 rounded-sm bg-white/5 group-hover:bg-amber-500/10 flex items-center justify-center shrink-0 transition">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </span>
+                            mano_design@abv.bg
+                        </a>
+                    </div>
                 </div>
 
-                <div class="space-y-6">
-                    <h3 class="text-xs uppercase tracking-[0.3em] font-bold text-amber-500">Последвайте ни</h3>
-                    <p class="text-gray-500 text-sm mb-4">Вижте най-новите ни проекти и процес на работа в реално време.</p>
-                    <div class="flex flex-col space-y-4">
-                        <a href="https://www.instagram.com/mano_design_mano/" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-amber-500 transition group">
-                            <div class="p-3 bg-zinc-800 group-hover:bg-amber-500/10 rounded-full transition">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            </div>
-                            <span class="font-bold tracking-widest uppercase">Instagram</span>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=100064560709611" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-amber-500 transition group">
-                            <div class="p-3 bg-zinc-800 group-hover:bg-amber-500/10 rounded-full transition">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            </div>
-                            <span class="font-bold tracking-widest uppercase">Facebook</span>
-                        </a>
+                <div class="flex flex-col gap-5">
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">Виж Го У Дома</p>
+                    <p class="text-sm text-white/55 leading-relaxed">Изпрати ни снимка на стената — получаваш дигитална визуализация как ще изглежда панелът, безплатно и без задължение.</p>
+                    <a href="contact.html" class="mt-auto inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500 hover:text-black hover:border-amber-500 font-bold text-[10px] uppercase tracking-[0.2em] px-5 py-3 rounded-sm transition group">
+                        <svg class="w-3.5 h-3.5 shrink-0 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        Заяви безплатна визуализация
+                    </a>
+                    <nav aria-label="Footer навигация" class="mt-2 flex flex-col gap-2">
+                        <a href="index.html" class="text-xs text-white/35 hover:text-amber-500 transition">→ Начало</a>
+                        <a href="case-study-ekaterina.html" class="text-xs text-white/35 hover:text-amber-500 transition">→ Реален Проект: Ресторант Екатерина</a>
+                    </nav>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">Шоурум</p>
+                    <p class="text-sm text-white/55 leading-relaxed">ул. „Хан Тервел" 10, ет.2<br>8600 Ямбол, България</p>
+                    <div class="flex-1 min-h-[180px] rounded-sm overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-500">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d183.90360309072818!2d26.50658227642589!3d42.48182227187896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbg!4v1773663321986!5m2!1sen!2sbg"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Местоположение на шоурума на Mano Design"></iframe>
                     </div>
                 </div>
 
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-10 text-[10px] uppercase tracking-widest text-gray-600">
-                <p>© 2026 MANO PANELLI. ВСИЧКИ ПРАВА ЗАПАЗЕНИ.</p>
-                <div class="mt-4 md:mt-0">
-                    Built by <a href="https://ginkogrudev.com" target="_blank" class="hover:text-amber-500 font-bold transition">GG Solutions</a>
-                </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-[10px] text-white/25 tracking-widest uppercase">© 2026 Mano Design. Всички права запазени.</p>
+                <p class="text-[10px] text-white/25 tracking-widest uppercase">
+                    Built by <a href="https://ginkogrudev.com" target="_blank" rel="noopener noreferrer" class="font-bold transition" style="color:#ff2d78;" onmouseover="this.style.color='#ff6fa8'" onmouseout="this.style.color='#ff2d78'">GG Solutions</a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <div id="lightbox" class="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl hidden flex items-center justify-center transition-opacity duration-300 opacity-0">
-        
-        <button id="close-lightbox" class="absolute top-6 right-6 z-50 text-white hover:text-amber-500 transition focus:outline-none p-4">
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl hidden items-center justify-center opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-label="Преглед на изображение">
+        <button id="close-lightbox" class="absolute top-6 right-6 z-50 text-white hover:text-amber-500 transition focus:outline-none p-4" aria-label="Затвори">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
-
-        <div id="lightbox-counter" class="absolute top-8 left-8 z-50 text-white/50 text-sm tracking-[0.3em] font-bold">1 / 17</div>
-
-        <img id="lightbox-img" src="" alt="Gallery Preview" class="max-h-[90vh] max-w-[90vw] object-contain shadow-2xl transition-transform duration-300 scale-95">
-
-        <div id="lightbox-prev" class="absolute inset-y-0 left-0 w-1/2 z-40 cursor-left flex items-center group">
+        <div id="lightbox-counter" class="absolute top-8 left-8 z-50 text-white/40 text-sm tracking-[0.3em] font-bold" aria-live="polite">1 / 13</div>
+        <img id="lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain shadow-2xl">
+        <div id="lightbox-prev" class="absolute inset-y-0 left-0 w-1/2 z-40 cursor-left flex items-center group" role="button" aria-label="Предишна снимка">
             <div class="ml-8 bg-black/50 p-4 rounded-full text-white opacity-0 group-hover:opacity-100 transition hidden md:block">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
             </div>
         </div>
-        <div id="lightbox-next" class="absolute inset-y-0 right-0 w-1/2 z-40 cursor-right flex items-center justify-end group">
+        <div id="lightbox-next" class="absolute inset-y-0 right-0 w-1/2 z-40 cursor-right flex items-center justify-end group" role="button" aria-label="Следваща снимка">
             <div class="mr-8 bg-black/50 p-4 rounded-full text-white opacity-0 group-hover:opacity-100 transition hidden md:block">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </div>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script>
+        // MOBILE MENU
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu    = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', isOpen);
+            mobileMenu.classList.toggle('flex', !isOpen);
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // NAV SHADOW
+        let ticking = false;
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    nav.classList.toggle('shadow-lg', window.scrollY > 20);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // SCROLL REVEAL
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+
+        // LIGHTBOX
+        const lightbox    = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCnt = document.getElementById('lightbox-counter');
+        const closeLB     = document.getElementById('close-lightbox');
+        const prevBtn     = document.getElementById('lightbox-prev');
+        const nextBtn     = document.getElementById('lightbox-next');
+
+        const items = Array.from(document.querySelectorAll('.gallery-item'));
+        let current = 0;
+
+        function openLightbox(index) {
+            current = index;
+            const img = items[index].querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxCnt.textContent = (index + 1) + ' / ' + items.length;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            requestAnimationFrame(() => requestAnimationFrame(() => lightbox.classList.remove('opacity-0')));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => {
+                lightbox.classList.remove('flex');
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        function navigate(dir) {
+            current = (current + dir + items.length) % items.length;
+            const img = items[current].querySelector('img');
+            lightboxImg.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxCnt.textContent = (current + 1) + ' / ' + items.length;
+                lightboxImg.style.opacity = '1';
+            }, 150);
+        }
+
+        items.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+        closeLB.addEventListener('click', closeLightbox);
+        prevBtn.addEventListener('click', () => navigate(-1));
+        nextBtn.addEventListener('click', () => navigate(1));
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+            if (e.key === 'Escape')     closeLightbox();
+            if (e.key === 'ArrowLeft')  navigate(-1);
+            if (e.key === 'ArrowRight') navigate(1);
+        });
+    </script>
 
 </body>
 </html>
